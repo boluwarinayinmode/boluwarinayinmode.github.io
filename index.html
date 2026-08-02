@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+    <title>Goodness Ayinmode</title>
+    <meta
+      name="description"
+      content="Goodness Ayinmode — PhD student in Computer Science at UC Davis, working on program analysis and testing for software reliability."
+    />
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --muted: #666;
+        --accent: #7a1f2b;
+        --rule: #e6e6e6;
+        --bg: #ffffff;
+        --maxw: 760px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          17px/1.6 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Georgia,
+          "Times New Roman",
+          serif;
+        padding: 3.2rem 1.25rem 4rem;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        gap: 1.6rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .photo {
+        width: 160px;
+        height: 160px;
+        flex: 0 0 160px;
+        border-radius: 8px;
+        object-fit: cover;
+        background: #f0f0f0;
+        border: 1px solid var(--rule);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        font-size: 0.72rem;
+        text-align: center;
+        line-height: 1.3;
+      }
+      .intro {
+        flex: 1 1 320px;
+        min-width: 260px;
+      }
+      h1 {
+        font-size: 1.9rem;
+        margin: 0 0 0.15rem;
+        letter-spacing: 0.2px;
+      }
+      .affil {
+        color: var(--muted);
+        margin: 0 0 0.6rem;
+        font-size: 1rem;
+      }
+      .links a {
+        color: var(--accent);
+        text-decoration: none;
+        margin-right: 0.9rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+      }
+      .links a:hover {
+        text-decoration: underline;
+      }
+      h2 {
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--ink);
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 0.35rem;
+        margin: 2.4rem 0 1rem;
+      }
+      p.bio {
+        margin: 1.6rem 0 0;
+      }
+      .pub {
+        margin: 0 0 1.15rem;
+      }
+      .pub .title {
+        font-weight: 600;
+      }
+      .pub .meta {
+        color: var(--muted);
+        font-size: 0.93rem;
+        margin-top: 0.15rem;
+      }
+      .pub .meta a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .pub .meta a:hover {
+        text-decoration: underline;
+      }
+      .venue {
+        font-weight: 600;
+        color: var(--ink);
+      }
+      sup {
+        color: var(--accent);
+      }
+      .legend {
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin-top: 0.8rem;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin-top: 3rem;
+        border-top: 1px solid var(--rule);
+        padding-top: 1rem;
+      }
+      @media (max-width: 520px) {
+        body {
+          padding-top: 2rem;
+        }
+        .links a {
+          display: inline-block;
+          margin-bottom: 0.3rem;
+        }
+      }
+
+      /* ---- Fonts: D base (serif body, sans name) with B for pub/ongoing ---- */
+      body {
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+      h1 {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
+      .affil,
+      .links a {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      /* Publications in Option B style */
+      h2 {
+        font-family: Newsreader, Georgia, serif;
+      }
+      .pub .title {
+        font-family: Newsreader, Georgia, serif;
+        font-weight: 600;
+        font-size: 1.05rem;
+      }
+      .pub .meta,
+      .venue {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      /* Header link icons */
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 1.15rem;
+      }
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-right: 0;
+      }
+      .links a svg {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+      }
+
+      /* Inline body links (modern, no default blue) */
+      .bio a {
+        color: var(--ink);
+        text-decoration: underline;
+        text-decoration-color: rgba(122, 31, 43, 0.4);
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+        transition:
+          color 0.15s ease,
+          text-decoration-color 0.15s ease;
+      }
+      .bio a:hover {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <!-- Replace with a real photo: save it as photo.jpg in this folder, or delete this div for a text-only page. -->
+        <div class="photo">add photo.jpg<br />(or delete)</div>
+        <div class="intro">
+          <h1>Goodness Ayinmode</h1>
+          <p class="affil">
+            PhD Student, Computer Science &middot; University of California,
+            Davis
+          </p>
+          <p class="links">
+            <a href="mailto:goayinmode@ucdavis.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Email</a>
+            <a href="https://scholar.google.com/citations?user=YqZPdOYAAAAJ" aria-label="Google Scholar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg> Google Scholar</a>
+            <a href="https://github.com/boluwarinayinmode" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg> GitHub</a>
+            <a href="cv.pdf" aria-label="CV (PDF)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg> CV</a>
+          </p>
+        </div>
+      </header>
+
+      <p class="bio">
+        I am a third-year Ph.D. student in the
+        <a href="https://cs.ucdavis.edu/">Department of Computer Science</a> at
+        the University of California, Davis, advised by Professor
+        <a href="https://web.cs.ucdavis.edu/~rubio/"
+          >Cindy Rubio-Gonz&aacute;lez</a
+        >. Previously, I received my B.Sc. (Hons) in Computer Science from the
+        <a href="https://ui.edu.ng/">University of Ibadan</a>.
+      </p>
+
+      <p class="bio">
+        My research interests span software reliability and the automated
+        detection, reproduction, and repair of software bugs, usually by
+        leveraging large language models (LLMs). Currently, I am focused on
+        autonomously reproducing and fixing scalability bugs in large-scale
+        distributed systems such as Apache Cassandra and Kafka. These bugs are
+        interesting because they stay latent at small scale and only emerge
+        during large-scale deployment. They also manifest as a range of symptoms
+        that degrade system performance rather than as outright failures, so
+        reproduction and repair success cannot be evaluated with the traditional
+        fail-pass oracle, where the bug-reproducing test must fail on the buggy
+        version of the code and pass on the fixed one. I am also interested in
+        scalability bugs in LLM inference and serving infrastructure such as
+        vLLM, SGLang, TensorRT-LLM, and Ray Serve. These are the software stacks
+        that put LLMs into production at scale, and they now serve the LLMs that
+        power AI services, which makes building tools to keep them reliable and
+        prevent failures increasingly important.
+      </p>
+
+      <h2>Publications</h2>
+
+      <div class="pub">
+        <div class="title">
+          Understanding and Detecting Scalability Faults in Large-Scale
+          Distributed Systems
+        </div>
+        <div class="meta">
+          <span class="venue"
+            >IEEE Transactions on Software Engineering (accepted)</span
+          >
+          &middot; <a href="https://arxiv.org/abs/2606.11815">Paper</a> &middot;
+          <a href="https://github.com/ucd-plse/scalelens">Code</a>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="title">
+          Automated Bug Reproduction in Large-Scale Distributed Systems
+        </div>
+        <div class="meta">
+          <span class="venue">In submission</span>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="title">
+          Code-Level Scalability Issues of LLM Serving Infrastructures
+        </div>
+        <div class="meta">
+          <span class="venue">In submission</span>
+        </div>
+      </div>
+
+      <footer>Last updated 2026. &middot; goayinmode@ucdavis.edu</footer>
+    </div>
+  </body>
+</html>
