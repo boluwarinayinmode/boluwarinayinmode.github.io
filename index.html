@@ -40,19 +40,34 @@
         padding: 3.2rem 1.25rem 4rem;
       }
       .wrap {
-        max-width: var(--maxw);
+        max-width: 1040px;
         margin: 0 auto;
+        display: flex;
+        gap: 3.5rem;
+        align-items: flex-start;
+      }
+      .main {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: var(--maxw);
+      }
+      @media (max-width: 820px) {
+        .wrap {
+          flex-direction: column;
+          gap: 1.75rem;
+        }
       }
       header {
         display: flex;
-        gap: 1.6rem;
+        gap: 3.5rem;
         align-items: flex-start;
         flex-wrap: wrap;
       }
       .photo {
-        width: 160px;
-        height: 160px;
-        flex: 0 0 160px;
+        width: 200px;
+        height: 200px;
+        flex: 0 0 200px;
+        order: -1;
         border-radius: 8px;
         object-fit: cover;
         background: #f0f0f0;
@@ -213,9 +228,8 @@
   </head>
   <body>
     <div class="wrap">
+      <div class="main">
       <header>
-        <!-- Save a square image as photo.jpg in this folder and it will appear here. -->
-        <img class="photo" src="photos/photo.jpg" alt="Goodness Ayinmode" onerror="this.style.display=&apos;none&apos;" />
         <div class="intro">
           <h1>Goodness Ayinmode</h1>
           <p class="affil">
@@ -324,6 +338,10 @@
       </div>
 
       <footer>Last updated: August 2026</footer>
+      </div>
+
+      <!-- Save a square image as photos/photo.jpg and it will appear here. -->
+      <div class="photo">Photo</div>
     </div>
   </body>
 </html>
